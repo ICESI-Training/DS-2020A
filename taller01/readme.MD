@@ -7,7 +7,7 @@
 - Realizar de forma autónoma el aprovisionamiento automático de infraestructura.
 - Diagnosticar y ejecutar de forma autónoma las acciones necesarias para lograr infraestructuras estables.
 
-# Escenario 01
+# Escenario 01 (Sesión en clase)
 
 Con el fin de probar una aplicación web, se requiere montar un servidor con CentOS 8.1, donde se ejecute el servidor web NGINX.
 
@@ -21,13 +21,13 @@ Con el fin de probar una aplicación web, se requiere montar un servidor con Cen
 4. configure en VirtualBox una [red solo anfitrión](https://condor.depaul.edu/glancast/443class/docs/vbox_host-only_setup.html) que le permita acceder a Nginx desde la máquina local.
 
 ## Entregable
-un documento en formato MarkDown (se suguiere el nombre Escenario01.MD) que contenga:
+un documento en formato [MarkDown](https://markdown.es/sintaxis-markdown/) (se suguiere el nombre Escenario01.MD) que contenga:
 1. Nombres completos y códigos de los estudiantes.
 2. Documentación y evidencias de la realización de cada una de las actividades propuestas.
 3. Dificultades encontradas en el proceso.
 4. Escriba en máximo 3 párrafos por qué esta forma de crear ambiente de pruebas puede ser apropiado (o inapropiado) para desplegar réplicas de este ambiente.
 
-# Escenario 02
+# Escenario 02 (sesión en clase)
 
 Con el fin de probar una aplicación web, se requieren montar dos servidores con CentOS 8.1: en al primero se ejecutará el servidor web NGINX y en el segundo un servidor de PostgreSQL
 
@@ -50,3 +50,19 @@ un documento en formato MarkDown (se suguiere el nombre Escenario02.MD) que cont
 2. Documentación y evidencias de la realización de cada una de las actividades propuestas.
 3. Dificultades encontradas en el proceso.
 4. Escriba en máximo 3 párrafos por qué esta forma de crear ambiente de pruebas puede ser apropiado (o inapropiado) para desplegar réplicas de este ambiente.
+
+# Escenario 03. (Para hacer en casa y entregar en 15 días)
+
+En este escenario se hará uso de lo aprendido anteriormente para implementar una aplicación web que haga uso de una base de datos, el sistema debe permitir insertar y listar datos de una tabla en la base de datos. La aplicación debe ser desplegada en un servidor web y la base de datos en un servidor aparte.
+
+## Pre Requisitos
+- [virtualBox](https://www.virtualbox.org/)
+- [vagrant](http://vagrantup.com)
+- [Saltstack](https://www.saltstack.com/)
+
+## Entregable
+un documento en formato MarkDown (se suguiere el nombre Escenario03.MD) que contenga:
+1. Nombres completos y códigos de los estudiantes.
+2. Documentación y evidencias del proceso de creación, provisionamiento y despliegue de la aplicación.
+3. Dificultades encontradas en el proceso.
+4. Conclusiones acerca de los hallazgos y aprendizajes obtenidos en el desarrollo del laboratorio.

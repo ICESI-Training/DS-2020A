@@ -1,0 +1,16 @@
+# Vagrant configuration for single VM machine
+Vagrant.configure("2") do |config|
+    # Every Vagrant development environment requires a box. You can search for
+    # boxes at https://vagrantcloud.com/search or https://vagrantbox.es
+    config.vm.box = "centos/7"
+    #Configure hostname
+    config.vm.hostname = "00-single"
+    #configure IP
+    config.vm.network "private_network", ip: "192.168.56.10"
+##configuration options for virtualbox
+#    config.vm.provider "virtualbox" do |vb|
+#       # Customize the amount of memory on the VM:
+#       vb.memory = "1024"
+#     end
+
+end

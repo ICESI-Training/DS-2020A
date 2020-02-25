@@ -1,0 +1,7 @@
+server_provision
+
+[webserver]
+ServerA ansible_host=192.168.56.2 
+
+[database]
+ServerB ansible_host=192.168.56.3

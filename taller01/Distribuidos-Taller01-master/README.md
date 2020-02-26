@@ -1,3 +1,9 @@
+### Manuel Alejandro Coral Lozano - A00301480
+### Jose Camilo Moctezuma Ruiz - A0024104
+### Cristian Alexander Duque Salazar - A00301448  
+
+### Escenario # 1
+
 Primer punto: se selecciona la imagen del SO a instalar
  <img src="/taller01/Distribuidos-Taller01-master/images/img1.jpg">
 

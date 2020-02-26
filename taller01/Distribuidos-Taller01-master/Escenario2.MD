@@ -37,16 +37,16 @@
 ##### 4. A partir del conocimiento anterior cree y provisione la máquina virtual para el servidor web, recuerde que el servidor web sea acessible desde la máquina local.
 
 + Para la creación de la máquina virtual del servidor web se hizo uso del siguiente archivo Vagrantfile  
-![Imagen 9](/images/vagrantfile-vm-ws.PNG)
+![Imagen 9](/taller01/Distribuidos-Taller01-master/images/vagrantfile-vm-ws.PNG)
 + Para el aprovisionamiento de la máquina virtual del servidor web se hizo uso de lo siguiente: 
   * Un fragmento de codigo Ansible en el Vagrantfile:  
-  ![Imagen 10](/images/ansible-fragmento-vm-ws.PNG)
+  ![Imagen 10](/taller01/Distribuidos-Taller01-master/images/ansible-fragmento-vm-ws.PNG)
   * Se realizo lo siguiente en el archivo/directorio **hosts**:  
   ![Imagen 11](https://raw.githubusercontent.com/ManuelCoral1998/Distribuidos-Taller01/master/images/hosts-ws.PNG)
   * Se hizo uso del siguiente archivo ***"ws.yml"*** que se encuentra en el playbook:
-  ![Imagen 12](/images/ansible-ws.PNG)
+  ![Imagen 12](/taller01/Distribuidos-Taller01-master/images/ansible-ws.PNG)
   * Se ejecuto el comando ***"vagrant up"*** y se obtuvo el siguiente resultado:  
-  ![Funcionamiento Apache](/images/prueba-ws.PNG)
+  ![Funcionamiento Apache](/taller01/Distribuidos-Taller01-master/images/prueba-ws.PNG)
 #### (ACTIVIDAD EXTRA) Con el fin de estudiar y practicar, el grupo decidio realizar una activiad extra, en la cual se pudieran:
 **1. Crear 2 máquinas virtuales, una para un servidor web y la otra para una base de datos.**
 **2. Aprovisionar el servidor web con Apache**

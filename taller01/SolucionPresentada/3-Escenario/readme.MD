@@ -423,3 +423,4 @@ Ahora ingresamos a la base de datos, y luego ahi imprimiremos en consola la tabl
 ___
 ### Conclusiones
 
+A partir de los dos escenarios anteriores, fue posible hacer un uso mucho más extenso de Vagrant y Ansible, en integración con NOdeJS y MySQL, para hacer un prototipo de aplicación que permite hacer uso de servidores web y base de datos. Asi, este taller nos permitió identificar los principales elementos para la automatización del despliegue de una solución de TI.

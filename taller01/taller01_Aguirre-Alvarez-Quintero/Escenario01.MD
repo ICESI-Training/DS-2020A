@@ -26,7 +26,7 @@ Con el fin de probar una aplicación web, se requiere montar un servidor con Cen
  
  En este taller, se descarga la ISO versión 7 de CentOS Linux, disponible en: https://wiki.centos.org/Download
  
- ![ISO CentOS](/taller01_Aguirre-Alvarez-Quintero/imagenes/ISOCentOS.png)
+ ![ISO CentOS](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ISOCentOS.png)
 
  2. Cree una máquina virtual en VirtualBox e Instale CentOS en ella. (Instalación estándar de centOS)
  
@@ -34,19 +34,19 @@ Con el fin de probar una aplicación web, se requiere montar un servidor con Cen
  
  Una vez descargado (disponible en: https://www.virtualbox.org/) e iniciado VirtualBox, se da click en "Nueva", en lo que se debe colocar un nombre descriptivo de la nueva máquina virtual, tamaño de disco duro y tamaño en memoria:
  
- ![Crear máquina](/taller01_Aguirre-Alvarez-Quintero/imagenes/CrearMaquina.png)
+ ![Crear máquina](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/CrearMaquina.png)
  
- ![Disco duro](/taller01_Aguirre-Alvarez-Quintero/imagenes/DiscoDuro.png)
+ ![Disco duro](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/DiscoDuro.png)
  
- ![Tamaño en memoria](/taller01_Aguirre-Alvarez-Quintero_/imagenes/TamahnioMemoria.png)
+ ![Tamaño en memoria](/taller01/taller01_Aguirre-Alvarez-Quintero_/imagenes/TamahnioMemoria.png)
  
  La configuración es la siguiente:
  
- ![Resumen configuración](/taller01_Aguirre-Alvarez-Quintero/imagenes/ResumenConfiguracion.png)
+ ![Resumen configuración](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ResumenConfiguracion.png)
  
  Al final del proceso de instalación, se debe especificar un usuario y contraseña:
  
- ![User and password](/taller01_Aguirre-Alvarez-Quintero/imagenes/InstalacionCentOS7.png)
+ ![User and password](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/InstalacionCentOS7.png)
  
  3. Acceda a la máquina CentOS e instale Nginx.
  
@@ -74,7 +74,7 @@ Con el fin de probar una aplicación web, se requiere montar un servidor con Cen
   
   <code> sudo systemctl status nginx </code>
   
-  ![Verificación Nginx](/taller01_Aguirre-Alvarez-Quintero/imagenes/VerificarNginx.png)
+  ![Verificación Nginx](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/VerificarNginx.png)
   
  4. Configure en VirtualBox una red solo anfitrión que le permita acceder a Nginx desde la máquina local.
  
@@ -82,19 +82,19 @@ Con el fin de probar una aplicación web, se requiere montar un servidor con Cen
  
   a. Seleccionar el adaptador de red en "Adapatador solo anfitrión":
   
-  ![Configuración red servidor](/taller01_Aguirre-Alvarez-Quintero/imagenes/ConfiguracionRedervidor.png)
+  ![Configuración red servidor](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ConfiguracionRedervidor.png)
   
   b. A continuación, se debe crear o editar el adaptador solo anfitrión, para ellos, se debe ir a VritualBox -> Preferencias -> Red
   
-  ![VirtualBox preferencias](/taller01_Aguirre-Alvarez-Quintero/imagenes/VirtualBoxPreferencias.png)
+  ![VirtualBox preferencias](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/VirtualBoxPreferencias.png)
   
   c. Se debe agregar una red solo anfitrión:
   
-  ![Configurar red anfritión](/taller01_Aguirre-Alvarez-Quintero/imagenes/ConfigurarRedAnfitrion.png)
+  ![Configurar red anfritión](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ConfigurarRedAnfitrion.png)
   
   d. Por último, verificamos que funciona, esto, accediendo desde el navegador de nuestra máquina a la dirección IP donde se encuentra el servidor Nginx:
   
-  ![Verificar funcionamiento](/taller01_Aguirre-Alvarez-Quintero/imagenes/VerificarFuncionamiento.png)
+  ![Verificar funcionamiento](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/VerificarFuncionamiento.png)
 
 ### Dificultades encontradas en el proceso
 

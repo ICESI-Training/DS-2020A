@@ -26,7 +26,7 @@ Con el fin de probar una aplicación web, se requieren montar dos servidores con
 
 Con el acompañamiento del profesor e investigando, se creó y aprovisionó la máquina virtual para la base de datos. Para ello, es necesario crear los siguientes archivos:
 
-![Archivos necesasios](/taller01_Aguirre-Alvarez-Quintero/imagenes/ArchivosNecesarios.png)
+![Archivos necesasios](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ArchivosNecesarios.png)
 
 - Dentro del archivo playbooks/server.yml se realizará el aprovisionamiento de la máquina virtual.
 - En el archivo ansible.cfg iría lo siguiente: 
@@ -41,35 +41,35 @@ Posteriormente se realiza la configuración en el Vagrantfile con los siguientes
 
 Se configuran parámetros tales como: La imagen del sistema operativo que queremos montar, la dirección IP del servidor y, además, se realiza la configuración de los archivos de ansible que debe de leer para aprovisionar la máquina.
 
-![Vagrantfile](/taller01_Aguirre-Alvarez-Quintero/imagenes/Vagrant.png)
+![Vagrantfile](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/Vagrant.png)
 
 A continuación, se congigura el archivo de HostDatabase, donde se especifíca la dirección ip del servidor de la base de datos.
 
-![Host Database](/taller01_Aguirre-Alvarez-Quintero/imagenes/HostDatabase.png)
+![Host Database](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/HostDatabase.png)
 
 Seguido a esto, realizamos la configuración del playbook, server.yml, donde especificamos cómo queremos provisionar nuestro servidor. En ella encontramos los comandos requeridos para: dar nombre a nuestro servidor, convertir el usuario de administración como root, y además instalar y ejecutar postgreSQL.
 
-![Ansible Database](/taller01_Aguirre-Alvarez-Quintero/imagenes/AnsibleDatabase.png)
+![Ansible Database](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/AnsibleDatabase.png)
 
 Luego de tener la configuración antes mencionada, podemos ejecutar el comando "vagrant up" para que se inicie el proceso de creación de la máquina virtual y el aprovisionamiento del servidor por medio de ansible.
 
-![Vagrant Up](/taller01_Aguirre-Alvarez-Quintero/imagenes/VagrantUP.png)
+![Vagrant Up](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/VagrantUP.png)
 
 2. Realice la conexión via SSH a la máquina virtual (con acompañamiento del profesor).
 
 Despues de que Vagrannt cree nuestra máquina virtual, nos podemos conectar a ella mediante SSH, usando el comando "vagrant ssh @nameServer".
 
-![SSH Database](/taller01_Aguirre-Alvarez-Quintero/imagenes/SSHDatabase.png)
+![SSH Database](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/SSHDatabase.png)
 
 Después del aprovisionamiento por medio de ansible, verificamos el funcionamiento de PostgreSQL de la siguiente manera:
 
-![Funcionamiento PostgreSQL](/taller01_Aguirre-Alvarez-Quintero/imagenes/PostgresFuncionando.png)
+![Funcionamiento PostgreSQL](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/PostgresFuncionando.png)
 
 3. Destruya y reconstruya la máquina virtual de la BD (con acompañamiento del profesor).
 
 Para destruir una máquina virtual creada con vagrant usamos el comando "vagrant destroy @nombreServer"
 
-![Destrucción ServerDB](/taller01_Aguirre-Alvarez-Quintero/imagenes/VagrantDestroy.png)
+![Destrucción ServerDB](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/VagrantDestroy.png)
 
 4. A partir del conocimiento anterior cree y provisione la máquina virtual para el servidor web, recuerde que el servidor web sea acessible desde la máquina local.
 
@@ -77,15 +77,15 @@ Para realizar el montaje del servidor web, no necesitamos repetir todos los paso
 
 Los cambios realizados fueron los siguientes:
 
-![Configuración Ansible Web Server](/taller01_Aguirre-Alvarez-Quintero/imagenes/AnsibleWebServer.png)
+![Configuración Ansible Web Server](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/AnsibleWebServer.png)
 
 Además, también debemos configurar la dirección IP del servidor. En este caso, usamos la misma que se usó en el servidor de base de datos.
 
-![Conf ip web server](/taller01_Aguirre-Alvarez-Quintero/imagenes/HostWebServer.png)
+![Conf ip web server](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/HostWebServer.png)
 
 Finalmente, volvemos a correr el comando "vagrant up" para que se cargue el nuevo serviodr y nos conectamos mediante SSH.
 
-![SSH Web Server](/taller01_Aguirre-Alvarez-Quintero/imagenes/SSHandHttpdRunning.png)
+![SSH Web Server](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/SSHandHttpdRunning.png)
 
 #### Dificultades
 

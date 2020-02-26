@@ -34,29 +34,29 @@ Para realizar la aplicación, nos basamos en el siguiente video: https://youtu.b
 
  a. Primero, en la carpeta raiz ejecutamos el comando <code> ssh-keygen </code> para generar un par de llaves pública y privada para poder, posteriormente, realizar SSH desde una máquina a otra:
  
-  ![ssh-keygen](/taller01_Aguirre-Alvarez-Quintero/imagenes/ssh-keygen.png)
+  ![ssh-keygen](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ssh-keygen.png)
   
   Esto nos creará los siguientes archivos:
   
-  ![Archivos al ejecutar ssh-keygen](/taller01_Aguirre-Alvarez-Quintero/imagenes/Archivosssh.png)
+  ![Archivos al ejecutar ssh-keygen](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/Archivosssh.png)
   
   b. Luego, realizamos la configuración de la máquina virtual tanto del servidor web como de la base de datos, esto se debe guardar en un archivo Vagrantfile:
   
-  ![Vagrantfile](/taller01_Aguirre-Alvarez-Quintero/imagenes/Vagrantfile.png)
+  ![Vagrantfile](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/Vagrantfile.png)
   
   c. Se debe especificar el inventario de los hosts:
   
-  ![Inventarios hosts](/taller01_Aguirre-Alvarez-Quintero/imagenes/InventarioHosts.png)
+  ![Inventarios hosts](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/InventarioHosts.png)
   
   d. EL archivo de configuración de Ansible:
   
-  ![Ansible cfg](/taller01_Aguirre-Alvarez-Quintero/imagenes/ansiblecfg.png)
+  ![Ansible cfg](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/ansiblecfg.png)
   
   e. Por último, se debe realizar el aprovisionamiento de ambas máquinas virtuales:
   
   Aprovisionamiento máquina virtual de la base de datos:
   
-  ![Database Ansible](/taller01_Aguirre-Alvarez-Quintero/imagenes/DatabaseAnsible.png)
+  ![Database Ansible](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/DatabaseAnsible.png)
   
   - Primero, se instala mongodb.
   - Luego, se copia el archivo de configuración de la base de datos, esto es necesario para especificar que se pueda acceder desde máquinas remotas a la base de datos.
@@ -65,7 +65,7 @@ Para realizar la aplicación, nos basamos en el siguiente video: https://youtu.b
   
   Aprovisionamiento máquina virtual del servidor web:
   
-  ![Webserver Ansible](/taller01_Aguirre-Alvarez-Quintero/imagenes/WebserverAnsible.png)
+  ![Webserver Ansible](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/WebserverAnsible.png)
   
   - En las primeras tres tareas se instala Node JS.
   - Luego, se instala Git y se copia el repositorio donde se encuentra la aplicación web.
@@ -73,24 +73,24 @@ Para realizar la aplicación, nos basamos en el siguiente video: https://youtu.b
   
   f. Se ejecuta el comando <code> vagrant up </code>
   
-  ![Vagrant UP](/taller01_Aguirre-Alvarez-Quintero/imagenes/vagrantup.png)
+  ![Vagrant UP](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/vagrantup.png)
   
   Al final, veremos el puerto por el que está escuchando el servidor web y mensaje de conexión exitosa a la base de datos:
   
-  ![Estado](/taller01_Aguirre-Alvarez-Quintero/imagenes/estado.png)
+  ![Estado](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/estado.png)
   
   
  g. Para verificar el funcionaiento, entramos en el navegador a la siguiente dirección: <code> 192.168.56.2:3000 </code>, nos aparecerá lo siguiente:
  
- ![App web inicial](/taller01_Aguirre-Alvarez-Quintero/imagenes/AppWebInicial.png)
+ ![App web inicial](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/AppWebInicial.png)
  
  Ejemplo de inserción:
  
- ![Ejemplo](/taller01_Aguirre-Alvarez-Quintero/imagenes/EjemploNodeJS.png)
+ ![Ejemplo](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/EjemploNodeJS.png)
  
  Por último, verificamos que se pueda realizar SSH a un servidor desde otro servidor:
  
- ![SSH ServerB](/taller01_Aguirre-Alvarez-Quintero/imagenes/sshServerB.png)
+ ![SSH ServerB](/taller01/taller01_Aguirre-Alvarez-Quintero/imagenes/sshServerB.png)
  
  ### Dificultades encontradas en el proceso.
  - La primer dificultad que se nos presentó fue realizar la aplicación con Node JS y MongoDB, puesto que ninguno de los tres sabiamos de estos temas. Fue decisión del equipo utilizar Node JS y MongoDB para aprender algo nuevo, por lo tanto, es una dificultad que esperabamos que sucediera y la forma de solucionarlo fue buscar documentación y videos como guías.

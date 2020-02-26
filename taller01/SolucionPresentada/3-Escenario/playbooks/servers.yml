@@ -1,0 +1,131 @@
+---
+#database installation
+- hosts: webserver
+  gather_facts: yes
+  become: yes
+  vars:
+    NODEJS_VERSION: "8"
+  tasks:
+    - name: Install the gpg key for nodejs LTS
+      apt_key:
+        url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+        state: present
+
+    - name: Install the nodejs LTS repos
+      apt_repository:
+        repo: "deb https://deb.nodesource.com/node_{{ NODEJS_VERSION }}.x {{ ansible_distribution_release }} main"
+        state: present
+        update_cache: yes
+
+    - name: Install the nodejs
+      apt:
+        name: nodejs
+        state: present
+    
+    - name: Install git
+      apt:
+        name: git
+        state: present
+
+    - name: Git Clone Repo
+      git: 
+        repo: https://github.com/Jorge-Andres-Moreno/Web_server.git
+        dest: '~/app'
+        update: yes
+        force: yes
+        accept_hostkey: no
+
+    - name: Install modules node
+      npm:
+        name: "{{item}}"
+        path: ~/app
+      with_items:
+        - express
+        - body-parser
+        - mysql
+
+    - name: Install PM2
+      npm:
+        name: pm2
+        global: yes
+    
+    - name: To Start a App
+      become: yes
+      become_method: sudo
+      become_user: root
+      command: sudo pm2 start ~/app/index.js
+      
+      
+          
+      
+  
+
+  # web server installation
+- hosts: database
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: no
+  tasks: 
+  - name: "updating server"
+    apt:
+      update_cache: yes
+ 
+  - name: "Installing apt dependencies"
+    apt:
+      name: "{{ item }}"
+      update_cache: yes
+    with_items:
+      - libmysqlclient-dev
+      - mysql-client
+      - python-dev
+      - python-pip
+      - python-mysqldb
+      - python3-pip
+
+  - name: Make sure pymysql is present
+    become: true # needed if the other tasks are not played as root
+    pip:
+      name: pymysql
+      state: present
+
+  - name: "Installing  mysql server"
+    apt:
+      name: mysql-server
+
+  - name: Configure mysql to listen to external interface
+    lineinfile:
+      dest: /etc/mysql/mysql.conf.d/mysqld.cnf
+      regexp: '^bind-address'
+      line: bind-address = 0.0.0.0
+
+  - name: Ensure mysql is running and starts on boot
+    service:
+      name: mysql
+      state: started
+      enabled: yes
+    become: yes
+
+  - name: Create mysql database
+    mysql_db:
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+      name: mydb
+      state: present 
+
+  - name: "Creating mysql user"
+    mysql_user:
+      name: root
+      password : password
+      priv: '*.*:ALL'
+      host: '%'
+      state: present
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+    notify: restart mysql
+  
+  handlers:
+    - name: restart mysql
+      service:
+        name: mysql
+        state: restarted
+
+
